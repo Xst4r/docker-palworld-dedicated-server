@@ -38,211 +38,211 @@ function startServer() {
 
     if [[ ! -z ${DIFFICULTY+x} ]]; then
         echo "Setting Difficulty to $DIFFICULTY"
-        sed -i "s/Difficulty=[a-zA-Z]*/Difficulty=$DIFFICULTY/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/Difficulty=[a-zA-Z]*/Difficulty=$DIFFICULTY/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${DAYTIME_SPEEDRATE+x} ]]; then
         echo "Setting DayTimeSpeedRate to $DAYTIME_SPEEDRATE"
-        sed -i "s/DayTimeSpeedRate=[+-]?([0-9]*[.])?[0-9]+/DayTimeSpeedRate=$DAYTIME_SPEEDRATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/DayTimeSpeedRate=[+-]?([0-9]*[.])?[0-9]+/DayTimeSpeedRate=$DAYTIME_SPEEDRATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${NIGHTTIME_SPEEDRATE+x} ]]; then
         echo "Setting NightTimeSpeedRate to $NIGHTTIME_SPEEDRATE"
-        sed -i "s/NightTimeSpeedRate=[+-]?([0-9]*[.])?[0-9]+/NightTimeSpeedRate=$NIGHTTIME_SPEEDRATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/NightTimeSpeedRate=[+-]?([0-9]*[.])?[0-9]+/NightTimeSpeedRate=$NIGHTTIME_SPEEDRATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${EXP_RATE+x} ]]; then
         echo "Setting ExpRate to $EXP_RATE"
-        sed -i "s/ExpRate=[+-]?([0-9]*[.])?[0-9]+/ExpRate=$EXP_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/ExpRate=[+-]?([0-9]*[.])?[0-9]+/ExpRate=$EXP_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PAL_CAPTURE_RATE+x} ]]; then
         echo "Setting PalCaptureRate to $PAL_CAPTURE_RATE"
-        sed -i "s/PalCaptureRate=[+-]?([0-9]*[.])?[0-9]+/PalCaptureRate=$PAL_CAPTURE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PalCaptureRate=[+-]?([0-9]*[.])?[0-9]+/PalCaptureRate=$PAL_CAPTURE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PAL_SPAWN_NUM_RATE+x} ]]; then
         echo "Setting PalSpawnNumRate to $PAL_SPAWN_NUM_RATE"
-        sed -i "s/PalSpawnNumRate=[+-]?([0-9]*[.])?[0-9]+/PalSpawnNumRate=$PAL_SPAWN_NUM_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PalSpawnNumRate=[+-]?([0-9]*[.])?[0-9]+/PalSpawnNumRate=$PAL_SPAWN_NUM_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PAL_DAMAGE_RATE_ATTACK+x} ]]; then
         echo "Setting PalDamageRateAttack to $PAL_DAMAGE_RATE_ATTACK"
-        sed -i "s/PalDamageRateAttack=[+-]?([0-9]*[.])?[0-9]+/PalDamageRateAttack=$PAL_DAMAGE_RATE_ATTACK/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PalDamageRateAttack=[+-]?([0-9]*[.])?[0-9]+/PalDamageRateAttack=$PAL_DAMAGE_RATE_ATTACK/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PAL_DAMAGE_RATE_DEFENSE+x} ]]; then
         echo "Setting PalDamageRateDefense to $PAL_DAMAGE_RATE_DEFENSE"
-        sed -i "s/PalDamageRateDefense=[+-]?([0-9]*[.])?[0-9]+/PalDamageRateDefense=$PAL_DAMAGE_RATE_DEFENSE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PalDamageRateDefense=[+-]?([0-9]*[.])?[0-9]+/PalDamageRateDefense=$PAL_DAMAGE_RATE_DEFENSE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PLAYER_DAMAGE_RATE_ATTACK+x} ]]; then
         echo "Setting PlayerDamageRateAttack to $PLAYER_DAMAGE_RATE_ATTACK"
-        sed -i "s/PlayerDamageRateAttack=[+-]?([0-9]*[.])?[0-9]+/PlayerDamageRateAttack=$PLAYER_DAMAGE_RATE_ATTACK/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PlayerDamageRateAttack=[+-]?([0-9]*[.])?[0-9]+/PlayerDamageRateAttack=$PLAYER_DAMAGE_RATE_ATTACK/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PLAYER_DAMAGE_RATE_DEFENSE+x} ]]; then
         echo "Setting PlayerDamageRateDefense to $PLAYER_DAMAGE_RATE_DEFENSE"
-        sed -i "s/PlayerDamageRateDefense=[+-]?([0-9]*[.])?[0-9]+/PlayerDamageRateDefense=$PLAYER_DAMAGE_RATE_DEFENSE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PlayerDamageRateDefense=[+-]?([0-9]*[.])?[0-9]+/PlayerDamageRateDefense=$PLAYER_DAMAGE_RATE_DEFENSE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PLAYER_STOMACH_DECREASE_RATE+x} ]]; then
         echo "Setting PlayerStomachDecreaceRate to $PLAYER_STOMACH_DECREASE_RATE"
-        sed -i "s/PlayerStomachDecreaceRate=[+-]?([0-9]*[.])?[0-9]+/PlayerStomachDecreaceRate=$PLAYER_STOMACH_DECREASE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PlayerStomachDecreaceRate=[+-]?([0-9]*[.])?[0-9]+/PlayerStomachDecreaceRate=$PLAYER_STOMACH_DECREASE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PLAYER_STAMINA_DECREACE_RATE+x} ]]; then
         echo "Setting PlayerStaminaDecreaceRate to $PLAYER_STAMINA_DECREACE_RATE"
-        sed -i "s/PlayerStaminaDecreaceRate=[+-]?([0-9]*[.])?[0-9]+/PlayerStaminaDecreaceRate=$PLAYER_STAMINA_DECREACE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PlayerStaminaDecreaceRate=[+-]?([0-9]*[.])?[0-9]+/PlayerStaminaDecreaceRate=$PLAYER_STAMINA_DECREACE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PLAYER_AUTO_HP_REGENE_RATE+x} ]]; then
         echo "Setting PlayerAutoHPRegeneRate to $PLAYER_AUTO_HP_REGENE_RATE"
-        sed -i "s/PlayerAutoHPRegeneRate=[+-]?([0-9]*[.])?[0-9]+/PlayerAutoHPRegeneRate=$PLAYER_AUTO_HP_REGENE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PlayerAutoHPRegeneRate=[+-]?([0-9]*[.])?[0-9]+/PlayerAutoHPRegeneRate=$PLAYER_AUTO_HP_REGENE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PLAYER_AUTO_HP_REGENE_RATE_IN_SLEEP+x} ]]; then
         echo "Setting PlayerAutoHpRegeneRateInSleep to $PLAYER_AUTO_HP_REGENE_RATE_IN_SLEEP"
-        sed -i "s/PlayerAutoHpRegeneRateInSleep=[+-]?([0-9]*[.])?[0-9]+/PlayerAutoHpRegeneRateInSleep=$PLAYER_AUTO_HP_REGENE_RATE_IN_SLEEP/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PlayerAutoHpRegeneRateInSleep=[+-]?([0-9]*[.])?[0-9]+/PlayerAutoHpRegeneRateInSleep=$PLAYER_AUTO_HP_REGENE_RATE_IN_SLEEP/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PAL_STOMACH_DECREACE_RATE+x} ]]; then
         echo "Setting PalStomachDecreaceRate to $PAL_STOMACH_DECREACE_RATE"
-        sed -i "s/PalStomachDecreaceRate=[+-]?([0-9]*[.])?[0-9]+/PalStomachDecreaceRate=$PAL_STOMACH_DECREACE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PalStomachDecreaceRate=[+-]?([0-9]*[.])?[0-9]+/PalStomachDecreaceRate=$PAL_STOMACH_DECREACE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PAL_STAMINA_DECREACE_RATE+x} ]]; then
         echo "Setting PalStaminaDecreaceRate to $X"
-        sed -i "s/PalStaminaDecreaceRate=[+-]?([0-9]*[.])?[0-9]+/PalStaminaDecreaceRate=$PAL_STAMINA_DECREACE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PalStaminaDecreaceRate=[+-]?([0-9]*[.])?[0-9]+/PalStaminaDecreaceRate=$PAL_STAMINA_DECREACE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PAL_AUTO_HP_REGENE_RATE+x} ]]; then
         echo "Setting PalAutoHPRegeneRate to $PAL_AUTO_HP_REGENE_RATE"
-        sed -i "s/PalAutoHPRegeneRate=[+-]?([0-9]*[.])?[0-9]+/PalAutoHPRegeneRate=$PAL_AUTO_HP_REGENE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PalAutoHPRegeneRate=[+-]?([0-9]*[.])?[0-9]+/PalAutoHPRegeneRate=$PAL_AUTO_HP_REGENE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PAL_AUTO_HP_REGENE_RATE_IN_SLEEP+x} ]]; then
         echo "Setting PalAutoHpRegeneRateInSleep to $PAL_AUTO_HP_REGENE_RATE_IN_SLEEP"
-        sed -i "s/PalAutoHpRegeneRateInSleep=[+-]?([0-9]*[.])?[0-9]+/PalAutoHpRegeneRateInSleep=$PAL_AUTO_HP_REGENE_RATE_IN_SLEEP/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PalAutoHpRegeneRateInSleep=[+-]?([0-9]*[.])?[0-9]+/PalAutoHpRegeneRateInSleep=$PAL_AUTO_HP_REGENE_RATE_IN_SLEEP/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${BUILD_OBJECT_DAMAGE_RATE+x} ]]; then
         echo "Setting BuildObjectDamageRate to $BUILD_OBJECT_DAMAGE_RATE"
-        sed -i "s/BuildObjectDamageRate=[+-]?([0-9]*[.])?[0-9]+/BuildObjectDamageRate=$BUILD_OBJECT_DAMAGE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/BuildObjectDamageRate=[+-]?([0-9]*[.])?[0-9]+/BuildObjectDamageRate=$BUILD_OBJECT_DAMAGE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${BUILD_OBJECT_DETERIORATION_DAMAGE_RATE+x} ]]; then
         echo "Setting PalAutoHpRegeneRateInSleep to $BUILD_OBJECT_DETERIORATION_DAMAGE_RATE"
-        sed -i "s/PalAutoHpRegeneRateInSleep=[+-]?([0-9]*[.])?[0-9]+/PalAutoHpRegeneRateInSleep=$BUILD_OBJECT_DETERIORATION_DAMAGE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PalAutoHpRegeneRateInSleep=[+-]?([0-9]*[.])?[0-9]+/PalAutoHpRegeneRateInSleep=$BUILD_OBJECT_DETERIORATION_DAMAGE_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${COLLECTION_DROP_RATE+x} ]]; then
         echo "Setting CollectionDropRate to $COLLECTION_DROP_RATE"
-        sed -i "s/CollectionDropRate=[+-]?([0-9]*[.])?[0-9]+/CollectionDropRate=$COLLECTION_DROP_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/CollectionDropRate=[+-]?([0-9]*[.])?[0-9]+/CollectionDropRate=$COLLECTION_DROP_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${COLLECTION_OBJECT_HP_RATE+x} ]]; then
         echo "Setting CollectionObjectHpRate to $COLLECTION_OBJECT_HP_RATE"
-        sed -i "s/CollectionObjectHpRate=[+-]?([0-9]*[.])?[0-9]+/CollectionObjectHpRate=$COLLECTION_OBJECT_HP_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/CollectionObjectHpRate=[+-]?([0-9]*[.])?[0-9]+/CollectionObjectHpRate=$COLLECTION_OBJECT_HP_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${COLLECTION_OBJECT_RESPAWN_SPEED_RATE+x} ]]; then
         echo "Setting CollectionObjectRespawnSpeedRate to $COLLECTION_OBJECT_RESPAWN_SPEED_RATE"
-        sed -i "s/CollectionObjectRespawnSpeedRate=[+-]?([0-9]*[.])?[0-9]+/CollectionObjectRespawnSpeedRate=$COLLECTION_OBJECT_RESPAWN_SPEED_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/CollectionObjectRespawnSpeedRate=[+-]?([0-9]*[.])?[0-9]+/CollectionObjectRespawnSpeedRate=$COLLECTION_OBJECT_RESPAWN_SPEED_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${ENEMY_DROP_ITEM_RATE+x} ]]; then
         echo "Setting EnemyDropItemRate to $ENEMY_DROP_ITEM_RATE"
-        sed -i "s/EnemyDropItemRate=[+-]?([0-9]*[.])?[0-9]+/EnemyDropItemRate=$ENEMY_DROP_ITEM_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/EnemyDropItemRate=[+-]?([0-9]*[.])?[0-9]+/EnemyDropItemRate=$ENEMY_DROP_ITEM_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${DEATH_PENALTY+x} ]]; then
         echo "Setting DeathPenalty to $DEATH_PENALTY"
-        sed -i "s/DeathPenalty=[a-zA-Z]*/DeathPenalty=$DEATH_PENALTY/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/DeathPenalty=[a-zA-Z]*/DeathPenalty=$DEATH_PENALTY/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${ENABLE_PLAYER_TO_PLAYER_DAMAGE+x} ]]; then
         echo "Setting bEnablePlayerToPlayerDamage to $ENABLE_PLAYER_TO_PLAYER_DAMAGE"
-        sed -i "s/bEnablePlayerToPlayerDamage=[a-zA-Z]*/bEnablePlayerToPlayerDamage=$ENABLE_PLAYER_TO_PLAYER_DAMAGE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bEnablePlayerToPlayerDamage=[a-zA-Z]*/bEnablePlayerToPlayerDamage=$ENABLE_PLAYER_TO_PLAYER_DAMAGE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${ENABLE_FRIENDLY_FIRE+x} ]]; then
         echo "Setting bEnableFriendlyFire to $ENABLE_FRIENDLY_FIRE"
-        sed -i "s/bEnableFriendlyFire=[a-zA-Z]*/bEnableFriendlyFire=$ENABLE_FRIENDLY_FIRE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bEnableFriendlyFire=[a-zA-Z]*/bEnableFriendlyFire=$ENABLE_FRIENDLY_FIRE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${ENABLE_INVADER_ENEMY+x} ]]; then
         echo "Setting bEnableInvaderEnemy to $ENABLE_INVADER_ENEMY"
-        sed -i "s/bEnableInvaderEnemy=[a-zA-Z]*/bEnableInvaderEnemy=$ENABLE_INVADER_ENEMY/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bEnableInvaderEnemy=[a-zA-Z]*/bEnableInvaderEnemy=$ENABLE_INVADER_ENEMY/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${ACTIVE_UNKO+x} ]]; then
         echo "Setting bActiveUNKO to $ACTIVE_UNKO"
-        sed -i "s/bActiveUNKO=[a-zA-Z]*/bActiveUNKO=$ACTIVE_UNKO/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bActiveUNKO=[a-zA-Z]*/bActiveUNKO=$ACTIVE_UNKO/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${ENABLE_AIM_ASSIST_PAD+x} ]]; then
         echo "Setting bEnableAimAssistPad to $ENABLE_AIM_ASSIST_PAD"
-        sed -i "s/bEnableAimAssistPad=[a-zA-Z]*/bEnableAimAssistPad=$ENABLE_AIM_ASSIST_PAD/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bEnableAimAssistPad=[a-zA-Z]*/bEnableAimAssistPad=$ENABLE_AIM_ASSIST_PAD/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${ENABLE_AIM_ASSIST_KEYBOARD+x} ]]; then
         echo "Setting bEnableAimAssistKeyboard to $ENABLE_AIM_ASSIST_KEYBOARD"
-        sed -i "s/bEnableAimAssistKeyboard=[a-zA-Z]*/bEnableAimAssistKeyboard=$ENABLE_AIM_ASSIST_KEYBOARD/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bEnableAimAssistKeyboard=[a-zA-Z]*/bEnableAimAssistKeyboard=$ENABLE_AIM_ASSIST_KEYBOARD/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${DROP_ITEM_MAX_NUM+x} ]]; then
         echo "Setting DropItemMaxNum to $DROP_ITEM_MAX_NUM"
-        sed -i "s/DropItemMaxNum=[0-9]*/DropItemMaxNum=$DROP_ITEM_MAX_NUM/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/DropItemMaxNum=[0-9]*/DropItemMaxNum=$DROP_ITEM_MAX_NUM/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${DROP_ITEM_MAX_NUM_UNKO+x} ]]; then
         echo "Setting DropItemMaxNum_UNKO to $DROP_ITEM_MAX_NUM_UNKO"
-        sed -i "s/DropItemMaxNum_UNKO=[0-9]*/DropItemMaxNum_UNKO=$DROP_ITEM_MAX_NUM_UNKO/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/DropItemMaxNum_UNKO=[0-9]*/DropItemMaxNum_UNKO=$DROP_ITEM_MAX_NUM_UNKO/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${BASE_CAMP_MAX_NUM+x} ]]; then
         echo "Setting BaseCampMaxNum to $BASE_CAMP_MAX_NUM"
-        sed -i "s/BaseCampMaxNum=[0-9]*/BaseCampMaxNum=$BASE_CAMP_MAX_NUM/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/BaseCampMaxNum=[0-9]*/BaseCampMaxNum=$BASE_CAMP_MAX_NUM/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${BASE_CAMP_WORKER_MAXNUM+x} ]]; then
         echo "Setting BaseCampWorkerMaxNum to $BASE_CAMP_WORKER_MAXNUM"
-        sed -i "s/BaseCampWorkerMaxNum=[0-9]*/BaseCampWorkerMaxNum=$BASE_CAMP_WORKER_MAXNUM/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/BaseCampWorkerMaxNum=[0-9]*/BaseCampWorkerMaxNum=$BASE_CAMP_WORKER_MAXNUM/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${DROP_ITEM_ALIVE_MAX_HOURS+x} ]]; then
         echo "Setting DropItemAliveMaxHours to $DROP_ITEM_ALIVE_MAX_HOURS"
-        sed -i "s/DropItemAliveMaxHours=[+-]?([0-9]*[.])?[0-9]+/DropItemAliveMaxHours=$DROP_ITEM_ALIVE_MAX_HOURS/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/DropItemAliveMaxHours=[+-]?([0-9]*[.])?[0-9]+/DropItemAliveMaxHours=$DROP_ITEM_ALIVE_MAX_HOURS/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${AUTO_RESET_GUILD_NO_ONLINE_PLAYERS+x} ]]; then
         echo "Setting bAutoResetGuildNoOnlinePlayers to $AUTO_RESET_GUILD_NO_ONLINE_PLAYERS"
-        sed -i "s/bAutoResetGuildNoOnlinePlayers=[a-zA-Z]*/bAutoResetGuildNoOnlinePlayers=$AUTO_RESET_GUILD_NO_ONLINE_PLAYERS/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bAutoResetGuildNoOnlinePlayers=[a-zA-Z]*/bAutoResetGuildNoOnlinePlayers=$AUTO_RESET_GUILD_NO_ONLINE_PLAYERS/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${AUTO_RESET_GUILD_TIME_NO_ONLINE_PLAYERS+x} ]]; then
         echo "Setting AutoResetGuildTimeNoOnlinePlayers to $AUTO_RESET_GUILD_TIME_NO_ONLINE_PLAYERS"
-        sed -i "s/AutoResetGuildTimeNoOnlinePlayers=[+-]?([0-9]*[.])?[0-9]+/AutoResetGuildTimeNoOnlinePlayers=$AUTO_RESET_GUILD_TIME_NO_ONLINE_PLAYERS/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/AutoResetGuildTimeNoOnlinePlayers=[+-]?([0-9]*[.])?[0-9]+/AutoResetGuildTimeNoOnlinePlayers=$AUTO_RESET_GUILD_TIME_NO_ONLINE_PLAYERS/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${GUILD_PLAYER_MAX_NUM+x} ]]; then
         echo "Setting GuildPlayerMaxNum to $GUILD_PLAYER_MAX_NUM"
-        sed -i "s/GuildPlayerMaxNum=[0-9]*/GuildPlayerMaxNum=$GUILD_PLAYER_MAX_NUM/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/GuildPlayerMaxNum=[0-9]*/GuildPlayerMaxNum=$GUILD_PLAYER_MAX_NUM/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${PAL_EGG_DEFAULT_HATCHING_TIME+x} ]]; then
         echo "Setting PalEggDefaultHatchingTime to $PAL_EGG_DEFAULT_HATCHING_TIME"
-        sed -i "s/PalEggDefaultHatchingTime=[+-]?([0-9]*[.])?[0-9]+/PalEggDefaultHatchingTime=$PAL_EGG_DEFAULT_HATCHING_TIME/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/PalEggDefaultHatchingTime=[+-]?([0-9]*[.])?[0-9]+/PalEggDefaultHatchingTime=$PAL_EGG_DEFAULT_HATCHING_TIME/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${WORK_SPEED_RATE+x} ]]; then
         echo "Setting WorkSpeedRate to $WORK_SPEED_RATE"
-        sed -i "s/WorkSpeedRate=[+-]?([0-9]*[.])?[0-9]+/WorkSpeedRate=$WORK_SPEED_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/WorkSpeedRate=[+-]?([0-9]*[.])?[0-9]+/WorkSpeedRate=$WORK_SPEED_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${IS_MULTIPLAY+x} ]]; then
         echo "Setting bIsMultiplay to $IS_MULTIPLAY"
-        sed -i "s/bIsMultiplay=[a-zA-Z]*/bIsMultiplay=$IS_MULTIPLAY/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bIsMultiplay=[a-zA-Z]*/bIsMultiplay=$IS_MULTIPLAY/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${IS_PVP+x} ]]; then
         echo "Setting bIsPvP to $IS_PVP"
-        sed -i "s/bIsPvP=[a-zA-Z]*/bIsPvP=$IS_PVP/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bIsPvP=[a-zA-Z]*/bIsPvP=$IS_PVP/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${CAN_PICKUP_OTHER_GUILD_DEATH_PENALTY_DROP+x} ]]; then
         echo "Setting bCanPickupOtherGuildDeathPenaltyDrop to $CAN_PICKUP_OTHER_GUILD_DEATH_PENALTY_DROP"
-        sed -i "s/bCanPickupOtherGuildDeathPenaltyDrop=[a-zA-Z]*/bCanPickupOtherGuildDeathPenaltyDrop=$CAN_PICKUP_OTHER_GUILD_DEATH_PENALTY_DROP/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bCanPickupOtherGuildDeathPenaltyDrop=[a-zA-Z]*/bCanPickupOtherGuildDeathPenaltyDrop=$CAN_PICKUP_OTHER_GUILD_DEATH_PENALTY_DROP/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${ENABLE_NON_LOGIN_PENALTY+x} ]]; then
         echo "Setting bEnableNonLoginPenalty to $ENABLE_NON_LOGIN_PENALTY"
-        sed -i "s/bEnableNonLoginPenalty=[a-zA-Z]*/bEnableNonLoginPenalty=$ENABLE_NON_LOGIN_PENALTY/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bEnableNonLoginPenalty=[a-zA-Z]*/bEnableNonLoginPenalty=$ENABLE_NON_LOGIN_PENALTY/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${ENABLE_FAST_TRAVEL+x} ]]; then
         echo "Setting bEnableFastTravel to $ENABLE_FAST_TRAVEL"
-        sed -i "s/bEnableFastTravel=[a-zA-Z]*/bEnableFastTravel=$ENABLE_FAST_TRAVEL/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bEnableFastTravel=[a-zA-Z]*/bEnableFastTravel=$ENABLE_FAST_TRAVEL/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${IS_START_LOCATION_SELECT_BY_MAP+x} ]]; then
         echo "Setting bIsStartLocationSelectByMap to $IS_START_LOCATION_SELECT_BY_MAP"
-        sed -i "s/bIsStartLocationSelectByMap=[a-zA-Z]*/bIsStartLocationSelectByMap=$IS_START_LOCATION_SELECT_BY_MAP/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bIsStartLocationSelectByMap=[a-zA-Z]*/bIsStartLocationSelectByMap=$IS_START_LOCATION_SELECT_BY_MAP/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${EXIST_PLAYER_AFTER_LOGOUT+x} ]]; then
         echo "Setting bExistPlayerAfterLogout to $EXIST_PLAYER_AFTER_LOGOUT"
-        sed -i "s/bExistPlayerAfterLogout=[a-zA-Z]*/bExistPlayerAfterLogout=$EXIST_PLAYER_AFTER_LOGOUT/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bExistPlayerAfterLogout=[a-zA-Z]*/bExistPlayerAfterLogout=$EXIST_PLAYER_AFTER_LOGOUT/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${ENABLE_DEFENSE_OTHER_GUILD_PLAYER+x} ]]; then
         echo "Setting bEnableDefenseOtherGuildPlayer to $ENABLE_DEFENSE_OTHER_GUILD_PLAYER"
-        sed -i "s/bEnableDefenseOtherGuildPlayer=[a-zA-Z]*/bEnableDefenseOtherGuildPlayer=$ENABLE_DEFENSE_OTHER_GUILD_PLAYER/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/bEnableDefenseOtherGuildPlayer=[a-zA-Z]*/bEnableDefenseOtherGuildPlayer=$ENABLE_DEFENSE_OTHER_GUILD_PLAYER/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${COOP_PLAYER_MAX_NUM+x} ]]; then
         echo "Setting CoopPlayerMaxNum to $COOP_PLAYER_MAX_NUM"
-        sed -i "s/CoopPlayerMaxNum=[+-]?([0-9]*[.])?[0-9]+/CoopPlayerMaxNum=$COOP_PLAYER_MAX_NUM/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/CoopPlayerMaxNum=[+-]?([0-9]*[.])?[0-9]+/CoopPlayerMaxNum=$COOP_PLAYER_MAX_NUM/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${MAX_PLAYERS+x} ]]; then
         echo "Setting max-players to $MAX_PLAYERS"
-        sed -i "s/ServerPlayerMaxNum=[0-9]*/ServerPlayerMaxNum=$MAX_PLAYERS/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/ServerPlayerMaxNum=[0-9]*/ServerPlayerMaxNum=$MAX_PLAYERS/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
     if [[ ! -z ${SERVER_NAME+x} ]]; then
         echo "Setting server name to $SERVER_NAME"
-        sed -i "s/ServerName=\"[^\"]*\"/ServerName=\"$SERVER_NAME\"/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+        sed -i -E "s/ServerName=\"[^\"]*\"/ServerName=\"$SERVER_NAME\"/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
         if [[ "$SERVER_NAME" == *"###RANDOM###"* ]]; then
             RAND_VALUE=$RANDOM
             echo "Found standard template, using random numbers in server name"
