@@ -56,6 +56,9 @@ term_handler() {
         rconcli 'save'
         rconcli 'broadcast Done...'
         sleep 3
+    if [[ -n $BACKUP_ENABLED ]] && [[ $BACKUP_ENABLED == "true" ]]; then
+        echo ">>> Backing Up Gameserv"
+        /backupmanager.sh
     fi
 	kill -SIGTERM $(pidof PalServer-Linux-Test)
 	tail --pid=$(pidof PalServer-Linux-Test) -f 2>/dev/null

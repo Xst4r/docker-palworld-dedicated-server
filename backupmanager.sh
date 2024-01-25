@@ -1,7 +1,9 @@
 #!/bin/bash
 
-DATE=$(date +%Y%m%d_%H%M%S)
+DATE=$(date +%Y-%m-%d_%H%M%S)
 TIME=$(date +%H-%M-%S)
+
+KEEP=100
 
 mkdir -p /palworld/backups
 if [[ -n $BACKUP_RETENTION_POLICY ]] && [[ $BACKUP_RETENTION_POLICY == "true" ]]; then
@@ -20,3 +22,7 @@ cd /palworld/Pal
 tar cfz /palworld/backups/saved-$DATE.tar.gz Saved/
 cd ~/steamcmd/
 rconcli 'broadcast Backup-done'
+echo ">>> Done"
+echo ">>> Removing backups except for the latest $KEEP"
+cd /palworld/backups
+ls /palworld/backups/ -1tr | sort |head -n -$KEEP | xargs -I% -d '\n' rm -f /palworld/backups/%
