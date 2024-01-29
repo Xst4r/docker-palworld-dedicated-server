@@ -390,7 +390,7 @@ function startMain() {
 
 term_handler() {
     if [[ -n $BACKUP_ENABLED ]] && [[ $BACKUP_ENABLED == "true" ]]; then
-        echo ">>> Backing Up Gameserv"
+        echo ">>> Backing Up Gameserver"
         /backupmanager.sh
     fi
 	kill -SIGTERM $(pidof PalServer-Linux-Test)

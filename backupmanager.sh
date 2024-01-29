@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATE=$(date +%Y-%m-%dT%H:%M:%S)
-KEEP=10
+KEEP=100
 
 # Create backup dir and change into it
 mkdir -p /palworld/backups && cd /palworld/Pal
